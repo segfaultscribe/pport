@@ -1,0 +1,29 @@
+---
+layout: base.njk
+---
+
+<div class="parent">
+    <div class="megas">
+        
+        <!-- Post Header Info -->
+        <div class="post-header-meta">
+            <span class="post-title-large">{{ title }}</span>
+            <div class="post-subline">
+                <span>{{ date | dateDisplay }}</span> <!-- Optional date filter or just print date -->
+                <span>•</span>
+                <span class="post-tag">{{ category }}</span>
+            </div>
+        </div>
+
+        <!-- Markdown Content gets injected here -->
+        <div class="post-content">
+            {{ content | safe }}
+        </div>
+
+        <!-- Back to writings link -->
+        <p style="margin-top: 3rem;">
+            <a href="/writings/">← Back</a>
+        </p>
+
+    </div>
+</div>

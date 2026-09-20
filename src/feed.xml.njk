@@ -1,0 +1,24 @@
+---
+permalink: /feed.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Adithya Krishna</title>
+    <link>{{ metadata.url or "https://lennzer.dev/" }}/</link>
+    <description>Backend engineer writings on systems and code.</description>
+    <language>en-us</language>
+    <atom:link href="{{ metadata.url or "https://lennzer.dev/" }}/feed.xml" rel="self" type="application/rss+xml" />
+    {%- for post in collections.writings %}
+    {%- set absolutePostUrl %}{{ post.url | url | absoluteUrl("https://lennzer.dev/") }}{% endset %}
+    <item>
+      <title>{{ post.data.title }}</title>
+      <link>{{ absolutePostUrl }}</link>
+      <description>{{ post.data.description }}</description>
+      <pubDate>{{ post.date | dateToRfc822 }}</pubDate>
+      <guid>{{ absolutePostUrl }}</guid>
+    </item>
+    {%- endfor %}
+  </channel>
+</rss>

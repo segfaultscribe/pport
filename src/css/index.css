@@ -1,0 +1,249 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #121212;
+    color: #d5d3c8; /* Slightly softer warm cream */
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 300;
+    margin: 0;
+    padding: 0 20px;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    text-wrap: break-word;
+}
+
+/* Navbar is slightly wider to give it an expansive, airy feel */
+.header-p {
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+    padding-top: 1.5rem;
+    padding-bottom: 2.5rem;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.1rem; /* Matched to the new body text size for proper hierarchy */
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.header a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.header a:hover {
+    color: #6af3a8;
+}
+
+/* Main content wrapper remains tightly focused for optimal reading */
+.parent {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 4rem;
+}
+
+.megas {
+    font-size: 1.1rem;
+    width: 100%;
+    line-height: 1.7;
+}
+
+/* Paragraph spacing and link aesthetics */
+.megas p {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.megas a {
+    color: #6af3a8; /* Clean developer-friendly accent mint */
+    text-decoration: none;
+}
+
+.megas a:hover {
+    text-decoration: underline;
+}
+
+/* Mint marker highlight for underlined phrases */
+.megas u {
+    text-decoration: underline;
+    text-decoration-color: #6af3a8;
+    text-underline-offset: 4px;
+    text-decoration-thickness: 0.75px;
+}
+
+/* Sophisticated warm color for bold text */
+.megas strong {
+    color: #cfc2b4;
+    font-weight: 600;
+}
+
+/* Custom text selection styling */
+::selection {
+    background-color: #49b569;
+    color: #121212;
+}
+
+::-moz-selection {
+    background-color: #3b5242;
+    color: #f4f7f2;
+}
+
+.hook {
+    color: #FF467A;
+}
+
+/* Filter buttons bar */
+/* Clean text-based filter tags */
+.tag-filters {
+    display: flex;
+    gap: 1.5rem; /* Generous spacing since the boxes are gone */
+    margin-bottom: 2rem;
+}
+
+.tag-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    color: #777777; /* Muted color for unselected tags */
+    font-size: 0.95rem;
+    cursor: pointer;
+    font-family: inherit;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.tag-btn:hover {
+    color: #d5d3c8; /* Brightens up when hovered */
+}
+
+/* Active tag gets the text color and your custom mint underline */
+.tag-btn.active {
+    color: #d5d3c8;
+    text-decoration: underline;
+    text-decoration-color: #6af3a8;
+    text-underline-offset: 4px;
+    text-decoration-thickness: 0.75px;
+}
+
+/* Post list container */
+.posts-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+/* Individual list item layout (spreads title/tag left, date right) */
+.post-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-size: 1.1rem;
+    width: 100%;
+}
+
+.post-main {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+/* Post title link with your mint underline style */
+.post-item a {
+    color: #d5d3c8;
+    text-decoration: underline;
+    text-decoration-color: #6af3a8;
+    text-underline-offset: 4px;
+    text-decoration-thickness: 0.75px;
+}
+
+.post-item a:hover {
+    color: #6af3a8;
+}
+
+/* Tag label next to title */
+.post-tag {
+    color: #777777;
+    font-size: 0.95rem;
+}
+
+/* Date pushed to the right edge */
+.post-date {
+    color: #777777;
+    font-size: 0.95rem;
+    white-space: nowrap;
+    margin-left: 1.5rem;
+}
+
+/* Post Header layout */
+.post-header-meta {
+    margin-bottom: 2.5rem;
+    border-bottom: 1px solid #222222;
+    padding-bottom: 1.5rem;
+}
+
+.post-title-large {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #ffffff;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.post-subline {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    color: #777777;
+    font-size: 0.95rem;
+}
+
+/* Markdown Code Blocks Styling */
+.post-content pre {
+    background-color: #161616;
+    border: 1px solid #222222;
+    padding: 1.25rem;
+    border-radius: 6px;
+    overflow-x: auto;
+    margin: 1.5rem 0;
+}
+
+.post-content code {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.9rem;
+    color: #d5d3c8;
+}
+
+.post-content p code {
+    background-color: #1a1a1a;
+    padding: 2px 6px;
+    border-radius: 4px;
+    color: #6af3a8;
+}
+
+/* Responsive images inside blog posts */
+.post-content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 2rem auto; /* Centers the image with breathing room */
+    border-radius: 4px; /* Optional subtle corner softening */
+}
