@@ -9,7 +9,7 @@ layout: base.njk
         <div class="post-header-meta">
             <span class="post-title-large">{{ title }}</span>
             <div class="post-subline">
-                <span>{{ date | dateDisplay }}</span>
+                <span>{{ dateDisplay }}</span>
                 <span>•</span>
                 <span class="post-tag">{{ category }}</span>
             </div>
@@ -22,7 +22,7 @@ layout: base.njk
 
         <!-- Back to writings link -->
         <p style="margin-top: 3rem;">
-            <a href="/writings/">← Back</a>
+            <a>←</a><a href="/writings/"> Back</a>
         </p>
 
     </div>

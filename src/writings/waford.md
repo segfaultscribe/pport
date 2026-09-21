@@ -1,7 +1,7 @@
 ---
 layout: post.njk
 title: Designing a Fan-Out Distribution System in Go
-displayDate: May, 2026
+dateDisplay: May, 2026
 category: tech
 description: Building a fan out distribution system in go using background workers, retries and a DLQ.
 ---

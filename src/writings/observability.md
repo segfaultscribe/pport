@@ -1,7 +1,7 @@
 ---
 layout: post.njk
 title: An introduction to observability 
-displayDate: Sept, 2026
+dateDisplay: Sept, 2026
 category: tech
 description: A familiarization to observability in deployed/distributed systems.
 ---
