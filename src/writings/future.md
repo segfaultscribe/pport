@@ -151,3 +151,5 @@ Now we can safely unlock the mutex cause any other goroutine reading the map fro
 Inside the condition we complete the process by making the request call and adding the response data and error to the event fields. The other goroutine which never got into the condition waits on `<-e.done`  which blocks until we close the channel inside the condition. The goroutines now all read an `e` struct that is populated by the response and error from the request call and only one goroutine did ever make the call.
 
 Now, this is pretty easy but if you're still confused, just keep wondering why we're using a channel in the solution and you'll reach the understanding yourself. This might sound like a hack the first time you encounter it but it's not! It's idiomatic Go, rooted in a property of channels that Rob Pike and the early Go team leaned on heavily: *closing a channel is a broadcast, not a handoff.*
+
+If you want to try writing this yourself and want to test it out, check out the original problem statement @ [non-blocking cache](https://github.com/blindlobstar/go-interview-problems/tree/main/04-non-blocking-cache)
