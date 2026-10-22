@@ -1,3 +1,18 @@
+@font-face {
+    font-family: 'Libron';
+    src: url('/fonts/Libron-Regular.woff2') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Applied dynamically only when category is 'story' */
+.story-font {
+    font-family: 'Libron', serif;
+    font-size: 1rem; /* Slightly tuned size if needed for readability */
+    line-height: 1.7;
+}
+
 *, *::before, *::after {
     box-sizing: border-box;
 }

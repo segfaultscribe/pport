@@ -7,6 +7,7 @@ module.exports = function(eleventyConfig) {
   // Pass-through folders
   eleventyConfig.addPassthroughCopy("src/css");
   eleventyConfig.addPassthroughCopy("src/images");
+  eleventyConfig.addPassthroughCopy("src/fonts");
 
   // Writings collection
   eleventyConfig.addCollection("writings", function(collectionApi) {

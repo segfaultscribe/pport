@@ -7,16 +7,16 @@ layout: base.njk
         
         <!-- Post Header Info -->
         <div class="post-header-meta">
-            <span class="post-title-large">{{ title }}</span>
+            <span class="post-title-large {% if category == 'story' %}story-font{% endif %}">{{ title }}</span>
             <div class="post-subline">
-                <span>{{ dateDisplay }}</span>
+                <span class="{% if category == 'story' %}story-font{% endif %}">{{ dateDisplay }}</span>
                 <span>•</span>
-                <span class="post-tag">{{ category }}</span>
+                <span class="post-tag {% if category == 'story' %}story-font{% endif %}">{{ category }}</span>
             </div>
         </div>
 
         <!-- Markdown Content gets injected here -->
-        <div class="post-content">
+        <div class="post-content {% if category == 'story' %}story-font{% endif %}">
             {{ content | safe }}
         </div>
 
